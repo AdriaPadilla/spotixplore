@@ -4,6 +4,7 @@ import os
 from spotipy.oauth2 import SpotifyClientCredentials
 import spotify_track_data.credentials as cr
 
+
 ### CREDENTIALS
 
 api_client_id = cr.SPOTIPY_CLIENT_ID
@@ -15,23 +16,20 @@ sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(api_cli
 
 def grab_playlist(playlist):
 
-	json_playlist_list = []
-
 	response = sp.playlist_tracks(playlist, fields=None, limit=None, offset=0, market=None)
 
 	### RESPONSE TREATMENT
 
 	### Create dir for each playlist:
 
-	output_folder = "output"
-	save_path = os.path.join(output_folder, playlist)
+	output_folder = "output_playlists"
+	save_path = os.path.join(output_folder)
 	if not os.path.exists(save_path):
 		os.makedirs(save_path)
 
 	### Save playlist info in json format:
 
-	file_name = playlist+"_data_"+".json"
-	json_playlist_list.append(file_name)
+	file_name = "playlits__"+playlist+"__data__"+".json"
 
 	with open(os.path.join(save_path, file_name), "w") as write_file:
 
@@ -40,5 +38,3 @@ def grab_playlist(playlist):
 
 		### Print response
 		print("playlist data in file: "+file_name)
-
-	return json_playlist_list, playlist
