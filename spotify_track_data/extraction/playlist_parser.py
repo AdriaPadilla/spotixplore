@@ -39,14 +39,13 @@ def playlist_parser():
 		for track_id in tracks_id_list:
 			track_features = sp.audio_features(track_id)
 
-			output_folder = "track_audio_features"
-			audio_features_path = os.path.join(output_folder, file)
-			if not os.path.exists(audio_features_path):
-				os.makedirs(audio_features_path)
+			output_folder = "output_audio_features__"+file
+			if not os.path.exists(output_folder):
+				os.makedirs(output_folder)
 
 			file_name = track_id+"__audio_features__"+".json"
 
-			with open(os.path.join(audio_features_path, file_name), "w") as write_file:
+			with open(os.path.join(output_folder, file_name), "w") as write_file:
 
 				### Dump response content in json_filename
 				json.dump(track_features, write_file, sort_keys=True, indent=4)
