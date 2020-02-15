@@ -69,9 +69,16 @@ def playlist_parser():
 
 					added_at_list.append(track["added_at"])
 
-					artist_name_list.append(track["track"]["album"]["artists"][0]["name"])
+					try:
+						artist_name_list.append(track["track"]["album"]["artists"][0]["name"])
+					except IndexError:
+						artist_name_list.append("NaN")
+								
 					album_name_list.append(track["track"]["album"]["name"])
-					cover_img_list.append(track["track"]["album"]["images"][0]["url"])
+					try:
+						cover_img_list.append(track["track"]["album"]["images"][0]["url"])
+					except IndexError:
+						cover_img_list.append("NaN")
 
 					popularity_list.append(int(track["track"]["popularity"]))
 
@@ -82,25 +89,70 @@ def playlist_parser():
 					# Append track ID to use in the next function.		
 					tracks_id_list.append(track_id)
 
+
 		## AUDIO FEATURES DATA EXTRCTION
 						
 		for track_id in tracks_id_list:
 			print("Extracting audio features for track ID: "+track_id )
 			track_features = sp.audio_features(track_id)
+			
 
 			track_data = track_features[0]
-			danceability_list.append(track_data["danceability"])
-			instrumentalness_list.append(track_data["instrumentalness"])
-			duration_ms_list.append(track_data["duration_ms"])
-			duration_sc = round(track_data["duration_ms"]/1000, 2)
-			duration_sc_list.append(duration_sc)
-			duration_mn = round(duration_sc/60, 2)
-			duration_mn_list.append(duration_mn)
-			energy_list.append(track_data["energy"])
-			loudness_list.append(track_data["loudness"])
-			tempo_list.append(track_data["tempo"])
-			mode_list.append(track_data["mode"])
-			key_list.append(track_data["key"])
+			try:
+				danceability_list.append(track_data["danceability"])
+			except TypeError:
+				danceability_list.append("NaN")
+			try:
+				instrumentalness_list.append(track_data["instrumentalness"])
+			except TypeError:
+				instrumentalness_list.append("NaN")
+			
+
+			### DURATION TRACK
+			try:	
+				duration_ms = track_data["duration_ms"]
+				duration_ms_list.append(duration_ms)
+			except TypeError:
+				duration_ms_list.append("NaN")
+
+			try:	
+				duration_sc = duration_ms/1000
+				duration_sc_list.append(round(duration_sc, 2))
+			except TypeError:
+				duration_sc_list.append("NaN")
+
+			try:	
+				duration_mn_list.append(round(duration_sc/60, 2))
+			except TypeError:
+				duration_mn_list.append("NaN")
+
+
+
+
+
+			try:	
+				energy_list.append(track_data["energy"])
+			except TypeError:
+				energy_list.append("NaN")
+			try:
+				loudness_list.append(track_data["loudness"])
+			except TypeError:
+				loudness_list.append("NaN")
+			try:
+				tempo_list.append(track_data["tempo"])
+			except TypeError:
+				tempo_list.append("NaN")
+			try:
+				mode_list.append(track_data["mode"])
+			except TypeError:
+				mode_list.append("NaN")
+			try:
+				key_list.append(track_data["key"])
+			except TypeError:
+				key_list.append("NaN")
+
+
+			### OUTPUT THE RESPONSE
 
 			output_folder = "output_audio_features__"+file
 			if not os.path.exists(output_folder):
@@ -142,7 +194,7 @@ def playlist_parser():
 		elif key == -1:
 			key_notation_list.append("null")
 		else:
-			pass
+			key_notation_list.append("NaN")
 
 	# Mode Transformation
 	for mode in mode_list:
@@ -154,6 +206,33 @@ def playlist_parser():
 			mode_notation_list.append("null")
 
 	print("Creating and exporting DataFrame. PLASE WAIT!")
+
+	print(
+	len(user_id_list),
+	len(playlist_id_list),
+	len(track_name_list),
+	len(added_at_list),
+	len(artist_name_list),
+	len(album_name_list),
+	len(track_id_list),
+	len(danceability_list),
+	len(instrumentalness_list),
+	len(duration_ms_list),
+	len(duration_sc_list),
+	len(duration_mn_list),
+	len(energy_list),
+	len(tempo_list),
+	len(mode_list),
+	len(mode_notation_list),
+	len(key_list),
+	len(key_notation_list),
+	len(cover_img_list),
+	len(popularity_list),
+	len(available_markets_count_lists),
+	len(loudness_list),
+		)
+
+
 
 	df = pd.DataFrame({
 	"user_id":user_id_list,
