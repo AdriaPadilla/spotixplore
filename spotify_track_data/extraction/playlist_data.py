@@ -37,4 +37,6 @@ def grab_playlist(playlist):
 		json.dump(response, write_file, sort_keys=True, indent=4)
 
 		### Print response
-		print("playlist data in file: "+file_name)
+		actual_path = os.getcwd()
+		print("File saved on: "+actual_path)
+		print("Playlist data in file: "+file_name)
