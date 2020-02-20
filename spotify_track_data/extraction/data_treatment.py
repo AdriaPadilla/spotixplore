@@ -66,8 +66,7 @@ def data_framing(track_features_data, playlist_data):
 	playlist_features_dataframe = pd.concat(transitional_playlist_df, ignore_index=True)
 
 	final_df = pd.merge(playlist_features_dataframe, track_features_dataframe, on="id")
-	print(final_df)
-	final_df.to_excel("output.xlsx")
+	return final_df
 
 	##	notes:
 	##	argument ignore_index=true in concat allow to reset dataframe index
