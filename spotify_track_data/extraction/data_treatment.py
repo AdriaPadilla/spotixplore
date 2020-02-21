@@ -5,6 +5,7 @@ import os
 
 track_features_dataframe = pd.DataFrame()
 playlist_features_dataframe = pd.DataFrame()
+general_tracks_id_list = []
 
 
 def data_framing(track_features_data, playlist_data):
@@ -66,7 +67,20 @@ def data_framing(track_features_data, playlist_data):
 	playlist_features_dataframe = pd.concat(transitional_playlist_df, ignore_index=True)
 
 	final_df = pd.merge(playlist_features_dataframe, track_features_dataframe, on="id")
-	return final_df
+
+	### tracks ID for graph_generator
+
+	transitional_track_id_list = []
+
+	for track in track_features_data:
+		data = track.__dict__
+
+		id = data["id"]
+		transitional_track_id_list.append(id)
+
+	general_tracks_id_list.extend(transitional_track_id_list)
+
+	return final_df, general_tracks_id_list
 
 	##	notes:
 	##	argument ignore_index=true in concat allow to reset dataframe index

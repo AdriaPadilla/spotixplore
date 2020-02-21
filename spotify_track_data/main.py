@@ -5,6 +5,7 @@ import spotify_track_data.extraction.playlist_parser as trr
 import spotify_track_data.extraction.playlist_features as pld
 import spotify_track_data.extraction.track_features as tf
 import spotify_track_data.extraction.data_treatment as dt
+import spotify_track_data.graphs.graph_generator as gr
 
 # First, you need to define credentials in "credentials.py"
 # Second, you have to define playlists in "starting_pint.py"
@@ -14,15 +15,19 @@ playlists = st.PLAYLISTS
 if __name__ == "__main__":
 
 	L = []
+	tracks_id_list = []
 
 	for playlist in playlists:
 		playlist_api_response = plr.grab_playlist(playlist)
 		track_features_api_response = trr.playlist_parser(playlist_api_response)
 		playlist_data = pld.grab_playlist_features(playlist_api_response)
 		tracks_features_list = tf.track_features(track_features_api_response)
-		df = dt.data_framing(tracks_features_list, playlist_data)
+		df, ids = dt.data_framing(tracks_features_list, playlist_data)
 
 		L.append(df)
+		tracks_id_list.extend(ids)
+
+	graph = gr.graphgenerator(tracks_id_list)
 
 	final_dataframe = pd.concat(L, ignore_index=True)
 		

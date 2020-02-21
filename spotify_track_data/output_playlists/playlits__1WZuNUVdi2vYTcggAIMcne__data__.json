@@ -1,0 +1,586 @@
+{
+    "href": "https://api.spotify.com/v1/playlists/1WZuNUVdi2vYTcggAIMcne/tracks?offset=0&limit=100",
+    "items": [
+        {
+            "added_at": "2012-09-29T08:57:34Z",
+            "added_by": {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/adria_padilla"
+                },
+                "href": "https://api.spotify.com/v1/users/adria_padilla",
+                "id": "adria_padilla",
+                "type": "user",
+                "uri": "spotify:user:adria_padilla"
+            },
+            "is_local": false,
+            "primary_color": null,
+            "track": {
+                "album": {
+                    "album_type": "album",
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/6KJIIOCWsWtNc7ICINtPEw"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/6KJIIOCWsWtNc7ICINtPEw",
+                            "id": "6KJIIOCWsWtNc7ICINtPEw",
+                            "name": "Jonathan Wilson",
+                            "type": "artist",
+                            "uri": "spotify:artist:6KJIIOCWsWtNc7ICINtPEw"
+                        }
+                    ],
+                    "available_markets": [],
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/album/1DYb5dTfLnU0fd3qq7GmWc"
+                    },
+                    "href": "https://api.spotify.com/v1/albums/1DYb5dTfLnU0fd3qq7GmWc",
+                    "id": "1DYb5dTfLnU0fd3qq7GmWc",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b273446ff9ea309e48d6f89a6498",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e02446ff9ea309e48d6f89a6498",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d00004851446ff9ea309e48d6f89a6498",
+                            "width": 64
+                        }
+                    ],
+                    "name": "Gentle Spirit",
+                    "release_date": "2011-08-15",
+                    "release_date_precision": "day",
+                    "total_tracks": 13,
+                    "type": "album",
+                    "uri": "spotify:album:1DYb5dTfLnU0fd3qq7GmWc"
+                },
+                "artists": [
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/6KJIIOCWsWtNc7ICINtPEw"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/6KJIIOCWsWtNc7ICINtPEw",
+                        "id": "6KJIIOCWsWtNc7ICINtPEw",
+                        "name": "Jonathan Wilson",
+                        "type": "artist",
+                        "uri": "spotify:artist:6KJIIOCWsWtNc7ICINtPEw"
+                    }
+                ],
+                "available_markets": [],
+                "disc_number": 1,
+                "duration_ms": 476360,
+                "episode": false,
+                "explicit": false,
+                "external_ids": {
+                    "isrc": "GBBRP1129403"
+                },
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/track/53FZHiJ5uEjQGxlxBeHaKm"
+                },
+                "href": "https://api.spotify.com/v1/tracks/53FZHiJ5uEjQGxlxBeHaKm",
+                "id": "53FZHiJ5uEjQGxlxBeHaKm",
+                "is_local": false,
+                "name": "Desert Raven",
+                "popularity": 1,
+                "preview_url": null,
+                "track": true,
+                "track_number": 3,
+                "type": "track",
+                "uri": "spotify:track:53FZHiJ5uEjQGxlxBeHaKm"
+            },
+            "video_thumbnail": {
+                "url": null
+            }
+        },
+        {
+            "added_at": "2012-09-29T08:57:44Z",
+            "added_by": {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/"
+                },
+                "href": "https://api.spotify.com/v1/users/",
+                "id": "",
+                "type": "user",
+                "uri": "spotify:user:"
+            },
+            "is_local": false,
+            "primary_color": null,
+            "track": {
+                "album": {
+                    "album_type": "album",
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/0h8q5Df7MVYUDg4Ic8IHwF"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/0h8q5Df7MVYUDg4Ic8IHwF",
+                            "id": "0h8q5Df7MVYUDg4Ic8IHwF",
+                            "name": "Sean Rowe",
+                            "type": "artist",
+                            "uri": "spotify:artist:0h8q5Df7MVYUDg4Ic8IHwF"
+                        }
+                    ],
+                    "available_markets": [],
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/album/2zPJm9qg20rlGCjjkjnzox"
+                    },
+                    "href": "https://api.spotify.com/v1/albums/2zPJm9qg20rlGCjjkjnzox",
+                    "id": "2zPJm9qg20rlGCjjkjnzox",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b27398e799d57bcaaeb6c70822ca",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e0298e799d57bcaaeb6c70822ca",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d0000485198e799d57bcaaeb6c70822ca",
+                            "width": 64
+                        }
+                    ],
+                    "name": "The Salesman and the Shark",
+                    "release_date": "2012-08-24",
+                    "release_date_precision": "day",
+                    "total_tracks": 12,
+                    "type": "album",
+                    "uri": "spotify:album:2zPJm9qg20rlGCjjkjnzox"
+                },
+                "artists": [
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/0h8q5Df7MVYUDg4Ic8IHwF"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/0h8q5Df7MVYUDg4Ic8IHwF",
+                        "id": "0h8q5Df7MVYUDg4Ic8IHwF",
+                        "name": "Sean Rowe",
+                        "type": "artist",
+                        "uri": "spotify:artist:0h8q5Df7MVYUDg4Ic8IHwF"
+                    }
+                ],
+                "available_markets": [],
+                "disc_number": 1,
+                "duration_ms": 282533,
+                "episode": false,
+                "explicit": false,
+                "external_ids": {
+                    "isrc": "USEP41218003"
+                },
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/track/4zKzZHtGEn77bSIZpn9euO"
+                },
+                "href": "https://api.spotify.com/v1/tracks/4zKzZHtGEn77bSIZpn9euO",
+                "id": "4zKzZHtGEn77bSIZpn9euO",
+                "is_local": false,
+                "name": "Flying",
+                "popularity": 0,
+                "preview_url": null,
+                "track": true,
+                "track_number": 2,
+                "type": "track",
+                "uri": "spotify:track:4zKzZHtGEn77bSIZpn9euO"
+            },
+            "video_thumbnail": {
+                "url": null
+            }
+        },
+        {
+            "added_at": "2012-09-29T08:59:52Z",
+            "added_by": {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/"
+                },
+                "href": "https://api.spotify.com/v1/users/",
+                "id": "",
+                "type": "user",
+                "uri": "spotify:user:"
+            },
+            "is_local": false,
+            "primary_color": null,
+            "track": {
+                "album": {
+                    "album_type": "album",
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/0kAQ9Ql8gMr8LNFQL01ALW"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/0kAQ9Ql8gMr8LNFQL01ALW",
+                            "id": "0kAQ9Ql8gMr8LNFQL01ALW",
+                            "name": "Heidi Spencer And The Rare Birds",
+                            "type": "artist",
+                            "uri": "spotify:artist:0kAQ9Ql8gMr8LNFQL01ALW"
+                        }
+                    ],
+                    "available_markets": [],
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/album/1xcqzE7Wm0kXuSZe5dydbs"
+                    },
+                    "href": "https://api.spotify.com/v1/albums/1xcqzE7Wm0kXuSZe5dydbs",
+                    "id": "1xcqzE7Wm0kXuSZe5dydbs",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b273081003a1c2417857703e1fcb",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e02081003a1c2417857703e1fcb",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d00004851081003a1c2417857703e1fcb",
+                            "width": 64
+                        }
+                    ],
+                    "name": "Under Streetlight Glow",
+                    "release_date": "2011",
+                    "release_date_precision": "year",
+                    "total_tracks": 10,
+                    "type": "album",
+                    "uri": "spotify:album:1xcqzE7Wm0kXuSZe5dydbs"
+                },
+                "artists": [
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/0kAQ9Ql8gMr8LNFQL01ALW"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/0kAQ9Ql8gMr8LNFQL01ALW",
+                        "id": "0kAQ9Ql8gMr8LNFQL01ALW",
+                        "name": "Heidi Spencer And The Rare Birds",
+                        "type": "artist",
+                        "uri": "spotify:artist:0kAQ9Ql8gMr8LNFQL01ALW"
+                    }
+                ],
+                "available_markets": [],
+                "disc_number": 1,
+                "duration_ms": 226293,
+                "episode": false,
+                "explicit": false,
+                "external_ids": {
+                    "isrc": "GBBRP1024903"
+                },
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/track/7qoqsmKoYjMo9RMr9Qcar8"
+                },
+                "href": "https://api.spotify.com/v1/tracks/7qoqsmKoYjMo9RMr9Qcar8",
+                "id": "7qoqsmKoYjMo9RMr9Qcar8",
+                "is_local": false,
+                "name": "Moth Met Spider",
+                "popularity": 0,
+                "preview_url": null,
+                "track": true,
+                "track_number": 3,
+                "type": "track",
+                "uri": "spotify:track:7qoqsmKoYjMo9RMr9Qcar8"
+            },
+            "video_thumbnail": {
+                "url": null
+            }
+        },
+        {
+            "added_at": "2012-09-29T09:01:50Z",
+            "added_by": {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/"
+                },
+                "href": "https://api.spotify.com/v1/users/",
+                "id": "",
+                "type": "user",
+                "uri": "spotify:user:"
+            },
+            "is_local": false,
+            "primary_color": null,
+            "track": {
+                "album": {
+                    "album_type": "album",
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/0GgNchtU9Fst3uEshZ7mV9"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/0GgNchtU9Fst3uEshZ7mV9",
+                            "id": "0GgNchtU9Fst3uEshZ7mV9",
+                            "name": "Josh T. Pearson",
+                            "type": "artist",
+                            "uri": "spotify:artist:0GgNchtU9Fst3uEshZ7mV9"
+                        }
+                    ],
+                    "available_markets": [],
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/album/60ep2af2vh3agSLakDzWB4"
+                    },
+                    "href": "https://api.spotify.com/v1/albums/60ep2af2vh3agSLakDzWB4",
+                    "id": "60ep2af2vh3agSLakDzWB4",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b273c4550aa76478716f2425ae2d",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e02c4550aa76478716f2425ae2d",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d00004851c4550aa76478716f2425ae2d",
+                            "width": 64
+                        }
+                    ],
+                    "name": "Last of the Country Gentlemen",
+                    "release_date": "2011-03-15",
+                    "release_date_precision": "day",
+                    "total_tracks": 7,
+                    "type": "album",
+                    "uri": "spotify:album:60ep2af2vh3agSLakDzWB4"
+                },
+                "artists": [
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/0GgNchtU9Fst3uEshZ7mV9"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/0GgNchtU9Fst3uEshZ7mV9",
+                        "id": "0GgNchtU9Fst3uEshZ7mV9",
+                        "name": "Josh T. Pearson",
+                        "type": "artist",
+                        "uri": "spotify:artist:0GgNchtU9Fst3uEshZ7mV9"
+                    }
+                ],
+                "available_markets": [],
+                "disc_number": 1,
+                "duration_ms": 705453,
+                "episode": false,
+                "explicit": false,
+                "external_ids": {
+                    "isrc": "GBR8R1000002"
+                },
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/track/03yk9Xe87XN73JiZSesWbW"
+                },
+                "href": "https://api.spotify.com/v1/tracks/03yk9Xe87XN73JiZSesWbW",
+                "id": "03yk9Xe87XN73JiZSesWbW",
+                "is_local": false,
+                "name": "Sweetheart I Ain't Your Christ",
+                "popularity": 0,
+                "preview_url": null,
+                "track": true,
+                "track_number": 2,
+                "type": "track",
+                "uri": "spotify:track:03yk9Xe87XN73JiZSesWbW"
+            },
+            "video_thumbnail": {
+                "url": null
+            }
+        },
+        {
+            "added_at": "2012-09-29T09:52:16Z",
+            "added_by": {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/"
+                },
+                "href": "https://api.spotify.com/v1/users/",
+                "id": "",
+                "type": "user",
+                "uri": "spotify:user:"
+            },
+            "is_local": false,
+            "primary_color": null,
+            "track": {
+                "album": {
+                    "album_type": "album",
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/2bCchS6Y3bKQjIK3MNFrx7"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/2bCchS6Y3bKQjIK3MNFrx7",
+                            "id": "2bCchS6Y3bKQjIK3MNFrx7",
+                            "name": "Justin Rutledge",
+                            "type": "artist",
+                            "uri": "spotify:artist:2bCchS6Y3bKQjIK3MNFrx7"
+                        }
+                    ],
+                    "available_markets": [],
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/album/5WaAdcouAHXCdcPL2e8Yuk"
+                    },
+                    "href": "https://api.spotify.com/v1/albums/5WaAdcouAHXCdcPL2e8Yuk",
+                    "id": "5WaAdcouAHXCdcPL2e8Yuk",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b273aadaa99d9a592db590034008",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e02aadaa99d9a592db590034008",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d00004851aadaa99d9a592db590034008",
+                            "width": 64
+                        }
+                    ],
+                    "name": "No Never Alone",
+                    "release_date": "2005-02-08",
+                    "release_date_precision": "day",
+                    "total_tracks": 10,
+                    "type": "album",
+                    "uri": "spotify:album:5WaAdcouAHXCdcPL2e8Yuk"
+                },
+                "artists": [
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/2bCchS6Y3bKQjIK3MNFrx7"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/2bCchS6Y3bKQjIK3MNFrx7",
+                        "id": "2bCchS6Y3bKQjIK3MNFrx7",
+                        "name": "Justin Rutledge",
+                        "type": "artist",
+                        "uri": "spotify:artist:2bCchS6Y3bKQjIK3MNFrx7"
+                    }
+                ],
+                "available_markets": [],
+                "disc_number": 1,
+                "duration_ms": 296813,
+                "episode": false,
+                "explicit": false,
+                "external_ids": {
+                    "isrc": "CASB10401801"
+                },
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/track/5oXNAR34COWvvlD2nzYcel"
+                },
+                "href": "https://api.spotify.com/v1/tracks/5oXNAR34COWvvlD2nzYcel",
+                "id": "5oXNAR34COWvvlD2nzYcel",
+                "is_local": false,
+                "name": "Too Sober to Sleep",
+                "popularity": 0,
+                "preview_url": null,
+                "track": true,
+                "track_number": 1,
+                "type": "track",
+                "uri": "spotify:track:5oXNAR34COWvvlD2nzYcel"
+            },
+            "video_thumbnail": {
+                "url": null
+            }
+        },
+        {
+            "added_at": "2012-10-27T10:51:07Z",
+            "added_by": {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/"
+                },
+                "href": "https://api.spotify.com/v1/users/",
+                "id": "",
+                "type": "user",
+                "uri": "spotify:user:"
+            },
+            "is_local": false,
+            "primary_color": null,
+            "track": {
+                "album": {
+                    "album_type": "single",
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/0GgNchtU9Fst3uEshZ7mV9"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/0GgNchtU9Fst3uEshZ7mV9",
+                            "id": "0GgNchtU9Fst3uEshZ7mV9",
+                            "name": "Josh T. Pearson",
+                            "type": "artist",
+                            "uri": "spotify:artist:0GgNchtU9Fst3uEshZ7mV9"
+                        }
+                    ],
+                    "available_markets": [],
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/album/2rt04yTM6uqNyF0V30luF3"
+                    },
+                    "href": "https://api.spotify.com/v1/albums/2rt04yTM6uqNyF0V30luF3",
+                    "id": "2rt04yTM6uqNyF0V30luF3",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b27393b16cb68b7844bcc3823592",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e0293b16cb68b7844bcc3823592",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d0000485193b16cb68b7844bcc3823592",
+                            "width": 64
+                        }
+                    ],
+                    "name": "Sorry With a Song",
+                    "release_date": "2011-10-03",
+                    "release_date_precision": "day",
+                    "total_tracks": 2,
+                    "type": "album",
+                    "uri": "spotify:album:2rt04yTM6uqNyF0V30luF3"
+                },
+                "artists": [
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/0GgNchtU9Fst3uEshZ7mV9"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/0GgNchtU9Fst3uEshZ7mV9",
+                        "id": "0GgNchtU9Fst3uEshZ7mV9",
+                        "name": "Josh T. Pearson",
+                        "type": "artist",
+                        "uri": "spotify:artist:0GgNchtU9Fst3uEshZ7mV9"
+                    }
+                ],
+                "available_markets": [],
+                "disc_number": 1,
+                "duration_ms": 186020,
+                "episode": false,
+                "explicit": false,
+                "external_ids": {
+                    "isrc": "GBR8R1100163"
+                },
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/track/5ovhxEPbFsMd22RzYignMb"
+                },
+                "href": "https://api.spotify.com/v1/tracks/5ovhxEPbFsMd22RzYignMb",
+                "id": "5ovhxEPbFsMd22RzYignMb",
+                "is_local": false,
+                "name": "Sorry With a Song - Single Version",
+                "popularity": 0,
+                "preview_url": null,
+                "track": true,
+                "track_number": 1,
+                "type": "track",
+                "uri": "spotify:track:5ovhxEPbFsMd22RzYignMb"
+            },
+            "video_thumbnail": {
+                "url": null
+            }
+        }
+    ],
+    "limit": 100,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 6
+}
