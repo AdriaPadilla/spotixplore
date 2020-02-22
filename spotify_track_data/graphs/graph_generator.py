@@ -1,55 +1,23 @@
-import spotipy
 import pandas as pd
-from spotipy.oauth2 import SpotifyClientCredentials
-import spotify_track_data.credentials as cr
 
-import json
-import os
+def generator(recom_objects_list):
 
+	nodes_pairs_list = []
 
-### CREDENTIALS
+	for track in recom_objects_list:
+		data = track.__dict__
 
-api_client_id = cr.SPOTIPY_CLIENT_ID
-api_client_secret = cr.SPOTIPY_CLIENT_SECRET
+		seed_id = data["seed_id"]
+		recommend_id = data["recommended_id"]
 
-### AUTH 
-sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(api_client_id, api_client_secret))
+		node_pair = str(seed_id)+";"+str(recommend_id)
 
+		nodes_pairs_list.append(node_pair)
 
-def graphgenerator(tracks_id_list):
+	graph_frame = pd.DataFrame(nodes_pairs_list)
 
-	node_pairs = []
+	print(graph_frame)
 
-	# Loop over seeds
-	for track_id in tracks_id_list:
+	graph_frame.to_csv("graph.csv", index=False, header=False)
 
-		# make the query
-		track_list = [] # Important: each seed must be in a list itself. That's the way this API works. 
-		track_list.append(track_id)
-		recommendation_api_response = sp.recommendations(seed_tracks=track_list, seed_artists=None, seed_genres=None, limit=10, country=None,)
-
-		data = recommendation_api_response["tracks"]
-
-		data_lecture = json.dumps(data, sort_keys=True, indent=4)
-		print(data_lecture)
-
-
-
-"""
-		jsons = json.dumps(data, sort_keys=True, indent=4)
-		print(jsons)
-
-"""
-
-
-			# Aquí s'han de separar els 10 tracks que retorna de la recomanació
-"""
-			recommended = [] # Llista d'Ids dels tracks recommanats
-
-	
-		node_pair = str(track_id+","+ #aqui va la recomanació!)
-		
-"""
-
-
-
+	return graph_frame

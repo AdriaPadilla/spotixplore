@@ -5,9 +5,9 @@ import spotify_track_data.extraction.playlist_parser as trr
 import spotify_track_data.extraction.playlist_features as pld
 import spotify_track_data.extraction.track_features as tf
 import spotify_track_data.extraction.data_treatment as dt
+import spotify_track_data.extraction.recommended_tracks as rec
 
-#import spotify_track_data.extraction.recommended_tracks as rec
-
+import spotify_track_data.graphs.graph_generator as graph
 # First, you need to define credentials in "credentials.py"
 # Second, you have to define playlists in "starting_pint.py"
 
@@ -16,6 +16,7 @@ playlists = st.PLAYLISTS
 if __name__ == "__main__":
 
 	L = []
+	G = []
 
 	for playlist in playlists:
 		
@@ -36,13 +37,20 @@ if __name__ == "__main__":
 		df = dt.data_framing(tracks_features_list, playlist_data)
 
 		# Get recommeded tracks for tracks in "tracks_id_list" <- This are all tracks inside the playlist
-		#recommended_api_response = rec.recommended_tracks(playlist_data)
+		recom_objects_list = rec.recommended(playlist_data)
+
+		# Get recommended objects and create a graph
+		graph = graph.generator(recom_objects_list)
 
 		# Append Dataframe to Global List to join all playlists in extraction
 		L.append(df)
+		G.append(graph)
+
 
 	# Concatenate all dataframes and Output a xlsx file
 	final_dataframe = pd.concat(L, ignore_index=True)
+	final_graph_grame = pd.concat(G, ignore_index=True)
 		
 	print(final_dataframe)
 	final_dataframe.to_excel("output.xlsx")
+	final_graph_grame.to_csv("graph.csv", index=False, header=False)
