@@ -80,7 +80,7 @@ def data_framing(track_features_data, playlist_data):
 
 	general_tracks_id_list.extend(transitional_track_id_list)
 
-	return final_df, general_tracks_id_list
+	return final_df
 
 	##	notes:
 	##	argument ignore_index=true in concat allow to reset dataframe index
