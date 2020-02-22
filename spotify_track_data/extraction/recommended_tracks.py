@@ -15,6 +15,7 @@ class Recommended_t():
 	def __init__(self,
 		seed_id,
 		seed_name,
+		seed_album,
 		recommended_id,
 		recommended_track_name,
 		recommeded_artist,
@@ -25,6 +26,7 @@ class Recommended_t():
 
 		self.seed_id = seed_id
 		self.seed_name = seed_name
+		self.seed_album = seed_album
 		self.recommended_id = recommended_id
 		self.recommended_track_name = recommended_track_name
 		self.recommeded_artist = recommeded_artist
@@ -38,15 +40,16 @@ def recommended(playlist_data):
 
 	# Open Playlist_data
 	for track in playlist_data:
-
 		temporal_seed_list = []
 
 		playlist_info = track.__dict__
 
 		seed_id = playlist_info["id"]
+		print("Getting recommended songs from API for track ID: "+ seed_id)
+
 		temporal_seed_list.append(seed_id)
 
-		recommended_api_response = sp.recommendations(seed_tracks=temporal_seed_list, limit=50, country=None)
+		recommended_api_response = sp.recommendations(seed_tracks=temporal_seed_list, limit=10, country=None)
 
 		recommended_songs = recommended_api_response["tracks"]
 
@@ -56,6 +59,7 @@ def recommended(playlist_data):
 				info = Recommended_t(
 					playlist_info.get("id", "Nan"),
 					playlist_info.get("track_name", "Nan"),
+					playlist_info.get("album_name"),
 					track.get("id", "Nan"),
 					track.get("name", "Nan"),
 					track["artists"][0].get("name", "Nan"),

@@ -9,6 +9,7 @@ class Playlist():
         added_by,
         artist_name,
         release_date,
+        album_name,
         popularity,
         track_number,
         track_name,
@@ -21,6 +22,7 @@ class Playlist():
 		self.added_by = added_by
 		self.artist_name = artist_name
 		self.release_date = release_date
+		self.album_name = album_name
 		self.popularity = popularity
 		self.track_number = track_number
 		self.track_name = track_name
@@ -46,6 +48,7 @@ def grab_playlist_features(playlist_api_response):
 				song["added_by"].get("id", "Nan"),
 				song["track"]["artists"][0].get("name", "Nan"),
 				song["track"]["album"].get("release_date", "Nan"),
+				song["track"]["album"].get("name", "Nan"),
 				song["track"].get("popularity", "Nan"),
 				song["track"].get("track_number", "Nan"),
 				song["track"].get("name", "Nan"),
@@ -56,7 +59,7 @@ def grab_playlist_features(playlist_api_response):
 			continue
 
 		playlist_features_list.append(info)
-
+	print("created Objects for Playlist Features")
 	return playlist_features_list
 
 

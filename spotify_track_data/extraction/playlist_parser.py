@@ -28,10 +28,9 @@ def playlist_parser(playlist_data):
 		track_id = song["track"]["uri"]
 		track_id = track_id.split(":")[2]
 		tracks_id_list.append(track_id)
-
-
 						
 	for track_id in tracks_id_list:
+		print("Gestting data from api for track ID: " + track_id)
 		track_features = sp.audio_features(track_id)
 		track_features_list.append(track_features)
 
