@@ -51,7 +51,11 @@ def track_features(track_features_api_response):
 
 		data = track_features[0]
 
-		print("getting track features from API for track ID: " + data["id"])
+		try:
+			print("getting track features from API for track ID: " + data["id"])
+		except TypeError:
+			continue
+
 		try:
 			track = Track(
 				data.get("acousticness", "Nan"),

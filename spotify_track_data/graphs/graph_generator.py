@@ -20,6 +20,4 @@ def graph_gen(recom_objects_list):
 
 	graph_frame = pd.DataFrame(nodes_pairs_list)
 
-	graph_frame.to_csv("graph.csv", index=False, header=False)
-
 	return graph_frame

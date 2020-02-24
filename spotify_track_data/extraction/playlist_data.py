@@ -18,28 +18,5 @@ def grab_playlist(playlist):
 
 	playlist_api_response = sp.playlist_tracks(playlist, fields=None, limit=None, offset=0, market=None)
 
-	### RESPONSE TREATMENT
-
-	### Create dir for each playlist:
-
-	output_folder = "output_playlists"
-	save_path = os.path.join(output_folder)
-	if not os.path.exists(save_path):
-		os.makedirs(save_path)
-
-	### Save playlist info in json format:
-
-	file_name = "playlits__"+playlist+"__data__"+".json"
-
-	with open(os.path.join(save_path, file_name), "w") as write_file:
-
-		### Dump response content in json_filename
-		json.dump(playlist_api_response, write_file, sort_keys=True, indent=4)
-
-		### Print response
-		actual_path = os.getcwd()
-		print("File saved on: "+actual_path)
-		print("Playlist data in file: "+file_name)
-
 	return playlist_api_response
 

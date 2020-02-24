@@ -1,4 +1,6 @@
 import pandas as pd
+import networkx as nx
+
 import spotify_track_data.starting_point as st
 import spotify_track_data.extraction.playlist_data as plr
 import spotify_track_data.extraction.playlist_parser as trr
@@ -8,6 +10,7 @@ import spotify_track_data.extraction.data_treatment as dt
 import spotify_track_data.extraction.recommended_tracks as rec
 
 import spotify_track_data.graphs.graph_generator as graph
+
 
 
 # First, you need to define credentials in "credentials.py"
@@ -52,9 +55,13 @@ if __name__ == "__main__":
 
 	# Concatenate all dataframes
 	final_dataframe = pd.concat(L, ignore_index=True)
-	final_graph_grame = pd.concat(G, ignore_index=True)
+	final_graph = pd.concat(G, ignore_index=True)
 		
 	print(final_dataframe)
-	print(final_graph_grame)
+	print(final_graph)
 	final_dataframe.to_excel("output.xlsx")
-	final_graph_grame.to_csv("graph.csv", index=False, header=False)
+	final_graph.to_csv("graph.csv", index=False, header=False)
+
+
+
+
