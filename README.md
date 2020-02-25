@@ -5,7 +5,9 @@ Note: Spotixplore is not finished!
 This tool has been created to explore the possibilities of the Spotify WEB API, and more concertedly, the way in which music is recommended and related. Spotixplore provides a bunch of metrics for each song, in order to develop patterns that allow a better understanding of the operation of Spotify, as well as the study of music production and consumption and the effect on users.
 
 ## 2. Limitations
-Spotify applies some limitations If you are interested in limitations. visit: https://developer.spotify.com/documentation/web-api/
+Spotify applies some limitations If you are interested in limitations. visit:
+
+https://developer.spotify.com/documentation/web-api/
 
 ### 3. Installation
 Option 1: Pip install
@@ -34,11 +36,11 @@ Step 3: Execute install
 
 To use this applications, you'll need Spotify API credentials:
 
-Go to: https://developer.spotify.com/dashboard/login
-Create a new account or login
-Click on "Create Client ID"
-Copy your "Client ID" and "Client Secret"
-Open "credentials.py" and place your credentials between " ":
++ Go to: https://developer.spotify.com/dashboard/login
++ Create a new account or login
++ Click on "Create Client ID"
++ Copy your "Client ID" and "Client Secret"
++ Open "credentials.py" and place your credentials between " ":
 ```python
 SPOTIPY_CLIENT_ID = "YOUR CLIENT ID"
 SPOTIPY_CLIENT_SECRET = "YOU SECRET CLIENT ID"
