@@ -1,4 +1,6 @@
 # Spotixplore V.0.1.2
+[![Anaconda-Server Badge](https://anaconda.org/adriapadilla/spotixplore/badges/version.svg)](https://anaconda.org/adriapadilla/spotixplore)[![Anaconda-Server Badge](https://img.shields.io/pypi/v/spotixplore.svg)](https://pypi.org/project/spotixplore/)
+
 
 
 ![Spotixplore graph image](https://github.com/AdriaPadilla/spotixplore/blob/master/spotixplore/img/img1.png
@@ -23,6 +25,11 @@ Option 1: Pip install
 ```bash
 ...$: pip install spotixplore
 ```
+
+Option 1.1: Conda install
+```bash
+conda install -c adriapadilla spotixplore
+``
 Option 2: Hardcode
 
 Step 1: Clone this repository in your pc
