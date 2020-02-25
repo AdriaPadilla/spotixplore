@@ -26,10 +26,12 @@ Option 1: Pip install
 Option 1.1: Conda install
 ```bash
 conda install -c adriapadilla spotixplore
-``
+```
+
 Option 2: Hardcode
 
 Step 1: Clone this repository in your pc
+
 ```bash
 ...$: git clone https://github.com/AdriaPadilla/spotixplore.git
 ```
