@@ -5,7 +5,7 @@
 )
 
 ## 1. What is this about?
-Note: Spotixplore is not finished!
+***Important note: Spotixplore is not finished!***
 
 This tool has been created to explore the possibilities of the Spotify WEB API, and more concertedly, the way in which music is recommended and related. Spotixplore provides a bunch of metrics for each song, in order to develop patterns that allow a better understanding of the operation of Spotify, as well as the study of music production and consumption and the effect on users.
 
