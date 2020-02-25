@@ -11,7 +11,9 @@ Note: Spotixplore is not finished!
 This tool has been created to explore the possibilities of the Spotify WEB API, and more concertedly, the way in which music is recommended and related. Spotixplore provides a bunch of metrics for each song, in order to develop patterns that allow a better understanding of the operation of Spotify, as well as the study of music production and consumption and the effect on users.
 
 ## 2. Limitations
-Spotify applies some limitations If you are interested in limitations. visit:
+Spotify applies some limitations.
+
+If you are interested in limitations. visit:
 
 https://developer.spotify.com/documentation/web-api/
 
@@ -81,4 +83,5 @@ You have to change "limit=" property on line 88 of "recommended_tracks.py"
 The application will create 2 files:
 
 One .XLSX file for each playlist with all the data, including recommended tracks.
+
 One .CSV file with node relations to generate a graph network visualization.
