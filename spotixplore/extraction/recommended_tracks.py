@@ -85,7 +85,7 @@ def get_recommended_from_seeds(seeds_list):
 		transitional_seed_list = []
 		transitional_seed_list.append(seed)
 
-		recommended_api_response = sp.recommendations(seed_tracks=transitional_seed_list, limit=75, country=None)
+		recommended_api_response = sp.recommendations(seed_tracks=transitional_seed_list, limit=5, country=None)
 
 		#AFEGIT NOVA CONSULTA A LA API DE SPOTIFY PER RECOLLIR LES FEATURES DE CADA TRACK
 
