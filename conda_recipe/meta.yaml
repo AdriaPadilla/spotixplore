@@ -1,0 +1,31 @@
+package:
+  name: spotixplore
+  version: "0.1.2"
+
+about:
+  home: https://github.com/AdriaPadilla/spotixplore
+  license: Apache
+  license_file: LICENSE
+  summary: Explore track features and recommendations from a Spotify's Playlist
+
+source:
+  path: ../
+
+build:
+  script: python -m pip install . --no-deps -vv
+  number: 0
+
+requirements:
+  host:
+    - python
+
+  run:
+    # Base dependencies
+    - python
+    - spotipy
+    - pandas
+    - openpyxl
+
+test:
+  imports:
+    - spotixplore
