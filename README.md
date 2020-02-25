@@ -1,4 +1,4 @@
-# Spotixplore V.0.1.1
+# Spotixplore V.0.1.2
 
 
 ![Spotixplore graph image](https://github.com/AdriaPadilla/spotixplore/blob/master/spotixplore/img/img1.png
