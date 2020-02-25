@@ -1,4 +1,10 @@
 # Spotixplore
+
+
+![Spotixplore graph image](https://github.com/AdriaPadilla/spotixplore/blob/master/spotixplore/img/img1.png
+)
+
+
 ## 1. What is this about?
 Note: Spotixplore is not finished!
 
