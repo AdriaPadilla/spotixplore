@@ -40,8 +40,6 @@ if __name__ == "__main__":
 		# Get recommeded tracks for tracks in "tracks_id_list" <- This are all tracks inside the playlist
 		recom_objects_list = rec.recommended(playlist_data)
 
-		print(recom_objects_list)
-
 		# Get recommended objects and create a graph
 		graph_frame = graph.graph_gen(recom_objects_list)
 
