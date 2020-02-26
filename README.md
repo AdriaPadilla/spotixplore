@@ -1,4 +1,4 @@
-# Spotixplore V.0.1.2
+# Spotixplore V 0.1.2
 [![Anaconda-Server Badge](https://anaconda.org/adriapadilla/spotixplore/badges/version.svg)](https://anaconda.org/adriapadilla/spotixplore)  [![Anaconda-Server Badge](https://img.shields.io/pypi/v/spotixplore.svg)](https://pypi.org/project/spotixplore/)
 
 ![Spotixplore graph image](https://github.com/AdriaPadilla/spotixplore/blob/master/spotixplore/img/img1.png
