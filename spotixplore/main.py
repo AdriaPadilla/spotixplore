@@ -10,17 +10,21 @@ import spotixplore.output.dataframing as df
 
 playlists = st.PLAYLISTS
 
-if __name__ == "__main__":
-
+def spotixplore(playlists):
 	for playlist in playlists:
-		object_track_list, seeds_list = ot.get_tracks_from_playlist(playlist)
-		object_track_recommendations_list, recom_tracks_id_list = rt.get_recommended_from_seeds(seeds_list)
+			object_track_list, seeds_list = ot.get_tracks_from_playlist(playlist)
+			object_track_recommendations_list, recom_tracks_id_list = rt.get_recommended_from_seeds(seeds_list)
 
 
-		gg.graph_generator(object_track_recommendations_list)
-		df.dataframing(object_track_list, object_track_recommendations_list)
+			gg.graph_generator(object_track_recommendations_list)
+			df.dataframing(object_track_list, object_track_recommendations_list)
 
-		print("Job Done!")
+			print("Job Done!")
+
+
+if __name__ == "__main__":
+	spotixplore(playlists)
+	
 
 
 
