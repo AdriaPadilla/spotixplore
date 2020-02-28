@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(name='spotixplore',
-      version="0.1.2",
+      version="0.1.3",
       url = "https://github.com/AdriaPadilla/spotixplore", 
       description='explore track features and recommended tracks from a playlist',
       author='Adrian Padilla',
