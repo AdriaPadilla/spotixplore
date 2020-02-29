@@ -14,6 +14,7 @@ class Track():
         disc_number,
         album_id,
         genres,
+        artist_id,
 		acousticness,
         analysis_url,
         danceability,
@@ -45,6 +46,7 @@ class Track():
 		self.disc_number = disc_number
 		self.album_id = album_id
 		self.album_genres = genres
+		self.artist_id = artist_id
 		self.acousticness = acousticness
 		self.analysis_url = analysis_url
 		self.danceability = danceability

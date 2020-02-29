@@ -1,7 +1,19 @@
 import pandas as pd
 
 
-def dataframing(object_track_list, object_track_recommendations_list):
+def dataframing(
+	object_track_list,
+	object_track_recommendations_list,
+	original_artists_list, 
+	recommended_artists_list,
+	):
+
+###
+###
+###   TRACKS OUTPUT DATAFRAMES 
+###
+###
+
 
 	tracks_dataframe = []
 
@@ -22,6 +34,7 @@ def dataframing(object_track_list, object_track_recommendations_list):
 		"disc_number": data["disc_number"],
 		"album_id": data["album_id"],
 		"album_genres": data["album_genres"],
+		"artist_id": data["artist_id"],
 		"acousticness": data["acousticness"],
 	    "danceability": data["danceability"],
 	    "duration_ms": data["duration_ms"],
@@ -58,6 +71,7 @@ def dataframing(object_track_list, object_track_recommendations_list):
 		"disc_number": data["disc_number"],
 		"album_id": data["album_id"],
 		"album_genres": data["album_genres"],
+		"artist_id": data["artist_id"],
 		"acousticness": data["acousticness"],
 	    "danceability": data["danceability"],
 	    "duration_ms": data["duration_ms"],
@@ -78,7 +92,55 @@ def dataframing(object_track_list, object_track_recommendations_list):
 
 	all_tracks_frame = pd.concat(tracks_dataframe, ignore_index=True)
 
-	all_tracks_frame.to_excel("output.xlsx")
+	all_tracks_frame.to_excel("all_tracks.xlsx")
 
+###
+###
+###   ARTITSTS OUTPUT DATAFRAMES 
+###
+###
 
-	print(all_tracks_frame)
+	artists_dataframe = []
+
+	for artist in original_artists_list:
+
+		data = artist.__dict__
+
+		original_artists_frame = pd.DataFrame({
+		"origin": "playlist",
+		"external_urls": data["external_urls"],
+		"followers": data["followers"],
+		"genres": data["genres"],
+		"href": data["href"],
+		"id": data["id"],
+		"name": data["name"],
+		"popularity": data["popularity"],
+		"type": data["type"],
+		"uri": ["uri"],
+		}, index=[0])
+
+		artists_dataframe.append(original_artists_frame)
+
+	for artist in recommended_artists_list:
+
+		data = artist.__dict__
+
+		recommended_artists_frame = pd.DataFrame({
+		"origin": "recommended",
+		"external_urls": data["external_urls"],
+		"followers": data["followers"],
+		"genres": data["genres"],
+		"href": data["href"],
+		"id": data["id"],
+		"name": data["name"],
+		"popularity": data["popularity"],
+		"type": data["type"],
+		"uri": ["uri"],
+		}, index=[0])
+
+		artists_dataframe.append(recommended_artists_frame)
+
+	all_artists_frame = pd.concat(artists_dataframe, ignore_index=True)
+
+	all_artists_frame.to_excel("artists_output.xlsx")
+

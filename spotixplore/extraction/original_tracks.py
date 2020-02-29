@@ -1,7 +1,7 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import spotixplore.credentials as cr
-import spotixplore.extraction.track_class as tc
+import spotixplore.classes.track_class as tc
 
 ### CREDENTIALS
 
@@ -52,6 +52,7 @@ def get_tracks_from_playlist(playlist_id):
 				track["track"].get("disc_number", "Nan"),
 				track["track"]["album"].get("id", "Nan"),
 				main_genre,
+				artist_id,
 				tf.get("acousticness", "Nan"),
 				tf.get("analysis_url", "Nan"),
 				tf.get("danceability", "Nan"),

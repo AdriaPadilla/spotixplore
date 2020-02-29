@@ -1,7 +1,7 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import spotixplore.credentials as cr
-import spotixplore.extraction.track_class as tc
+import spotixplore.classes.track_class as tc
 
 
 ### CREDENTIALS
@@ -38,7 +38,7 @@ def get_recommended_from_seeds(seeds_list):
 
 			# GET ALBUM GENRES
 			artist_id = track["artists"][0]["id"] 
-			artist_info= sp.artist(artist_id)
+			artist_info = sp.artist(artist_id)
 			try:
 				main_genre = artist_info["genres"][0]
 			except IndexError:
@@ -59,6 +59,7 @@ def get_recommended_from_seeds(seeds_list):
 					track.get("disc_number", "Nan"),
 					track["album"].get("id", "Nan"),
 					main_genre,
+					artist_id,
 					tf.get("acousticness", "Nan"),
 					tf.get("analysis_url", "Nan"),
 					tf.get("danceability", "Nan"),
