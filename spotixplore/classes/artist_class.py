@@ -9,7 +9,7 @@ class Artist():
 		genres_2,
 		href,
 		id,
-		name,
+		artist_name,
 		popularity,
 		type,
 		uri,
@@ -17,12 +17,12 @@ class Artist():
 		self.seed = seed
 		self.external_urls = external_urls
 		self.followers = followers
-		self.genres = genres
+		self.artist_genres = genres
 		self.genres_1 = genres_1
 		self.genres_2 = genres_2
 		self.href = href
 		self.id = id
-		self.name = name
+		self.artist_name = artist_name
 		self.popularity = popularity
 		self.type = type
 		self.uri = uri

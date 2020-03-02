@@ -19,7 +19,7 @@ def spotixplore(playlists):
 
 			original_artists_list, recommended_artists_list = ga.get_artists(object_track_list)
 
-			tg.graph_generator(object_track_recommendations_list, recommended_artists_list, playlist)
+			tg.graph_generator(object_track_recommendations_list, recommended_artists_list, playlist, object_track_list, original_artists_list)
 			df.dataframing(object_track_list, object_track_recommendations_list, original_artists_list, recommended_artists_list, playlist)
 
 			print("Job Done!")
