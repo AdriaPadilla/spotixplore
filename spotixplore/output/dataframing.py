@@ -6,6 +6,7 @@ def dataframing(
 	object_track_recommendations_list,
 	original_artists_list, 
 	recommended_artists_list,
+	playlist,
 	):
 
 ###
@@ -92,7 +93,7 @@ def dataframing(
 
 	all_tracks_frame = pd.concat(tracks_dataframe, ignore_index=True)
 
-	all_tracks_frame.to_excel("all_tracks_output.xlsx")
+	all_tracks_frame.to_excel(playlist+"_all_tracks_output.xlsx")
 
 ###
 ###
@@ -146,5 +147,5 @@ def dataframing(
 
 	all_artists_frame = pd.concat(artists_dataframe, ignore_index=True)
 
-	all_artists_frame.to_excel("all_artists_output.xlsx")
+	all_artists_frame.to_excel(playlist+"_all_artists_output.xlsx")
 

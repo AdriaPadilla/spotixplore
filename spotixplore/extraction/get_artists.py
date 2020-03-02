@@ -12,7 +12,7 @@ api_client_secret = cr.SPOTIPY_CLIENT_SECRET
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(api_client_id, api_client_secret))
 
 
-def get_artists(object_track_list, object_track_recommendations_list):
+def get_artists(object_track_list):
 
 	original_artists_list = []
 	recommended_artists_list = []
@@ -26,9 +26,18 @@ def get_artists(object_track_list, object_track_recommendations_list):
 		print("Getting artist info for: "+artist_id)
 
 		a_info = sp.artist(artist_id)
-		artist_genres = a_info["genres"][0]
-		genres_1 = a_info["genres"][1]
-		genres_2 = a_info["genres"][2]
+		try:
+			artist_genres = a_info["genres"][0]
+		except IndexError:
+			artist_genres = "Nan"
+		try:
+			genres_1 = a_info["genres"][1]
+		except IndexError:
+			genres_1 = "Nan"
+		try:
+			genres_2 = a_info["genres"][2]
+		except IndexError:
+			genres_2 = "Nan"
 
 		artist_object = ar.Artist(
 		"from playlist",
@@ -55,10 +64,16 @@ def get_artists(object_track_list, object_track_recommendations_list):
 		for artist in artists:
 			try:
 				artist_genres = artist["genres"][0]
-				genres_1 = artist["genres"][1]
-				genres_2 = artist["genres"][2]				
 			except IndexError:
 				artist_genres = "Nan"
+			try:
+				genres_1 = artist["genres"][1]
+			except IndexError:
+				genres_1 = "Nan"
+			try:
+				genres_2 = artist["genres"][2]
+			except IndexError:
+				genres_2 = "Nan"
 
 			artist_object = ar.Artist(
 				seed,
