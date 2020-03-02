@@ -92,11 +92,11 @@ def dataframing(
 
 	all_tracks_frame = pd.concat(tracks_dataframe, ignore_index=True)
 
-	all_tracks_frame.to_excel("all_tracks.xlsx")
+	all_tracks_frame.to_excel("all_tracks_output.xlsx")
 
 ###
 ###
-###   ARTITSTS OUTPUT DATAFRAMES 
+###   ARTISTS OUTPUT DATAFRAMES 
 ###
 ###
 
@@ -107,16 +107,18 @@ def dataframing(
 		data = artist.__dict__
 
 		original_artists_frame = pd.DataFrame({
-		"origin": "playlist",
+		"origin": data["seed"],
 		"external_urls": data["external_urls"],
 		"followers": data["followers"],
 		"genres": data["genres"],
+		"genres_1": data["genres_1"],
+		"genres_2": data["genres_2"],
 		"href": data["href"],
 		"id": data["id"],
 		"name": data["name"],
 		"popularity": data["popularity"],
 		"type": data["type"],
-		"uri": ["uri"],
+		"uri": data["uri"],
 		}, index=[0])
 
 		artists_dataframe.append(original_artists_frame)
@@ -126,21 +128,23 @@ def dataframing(
 		data = artist.__dict__
 
 		recommended_artists_frame = pd.DataFrame({
-		"origin": "recommended",
+		"origin": data["seed"],
 		"external_urls": data["external_urls"],
 		"followers": data["followers"],
 		"genres": data["genres"],
+		"genres_1": data["genres_1"],
+		"genres_2": data["genres_2"],
 		"href": data["href"],
 		"id": data["id"],
 		"name": data["name"],
 		"popularity": data["popularity"],
 		"type": data["type"],
-		"uri": ["uri"],
+		"uri": data["uri"],
 		}, index=[0])
 
 		artists_dataframe.append(recommended_artists_frame)
 
 	all_artists_frame = pd.concat(artists_dataframe, ignore_index=True)
 
-	all_artists_frame.to_excel("artists_output.xlsx")
+	all_artists_frame.to_excel("all_artists_output.xlsx")
 

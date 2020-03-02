@@ -39,7 +39,7 @@ def get_tracks_from_playlist(playlist_id):
 
 		try:
 			track_data = tc.Track(
-				"from_user",
+				"from_playlist",
 				track["track"].get("id", "Nan"),
 				track.get("added_at", "Nan"),
 				track["added_by"].get("id", "Nan"),

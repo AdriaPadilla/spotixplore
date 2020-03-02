@@ -17,4 +17,4 @@ def graph_generator(object_track_recommendations_list):
 		print("Creating edges: " + node_pair)
 
 	graph_frame = pd.DataFrame(nodes_pairs_list)
-	graph_frame.to_csv("graph.csv", index=False, header=False)
+	graph_frame.to_csv("track_graph.csv", index=False, header=False)
