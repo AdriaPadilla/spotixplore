@@ -7,7 +7,7 @@
 ## 1. What is this about?
 ***Important note: Spotixplore is not finished!***
 
-This tool has been created to explore the possibilities of the Spotify WEB API, and more concertedly, the way in which music is recommended and related. **Spotixplore** provides a bunch of metrics for each song track, in order to develop patterns that allow a better understanding of the operation of Spotify, as well as the study of music production and consumption and the effect on users.
+This tool has been created to explore the possibilities of the Spotify WEB API, and more specifically, the way in which music is recommended and related. **Spotixplore** provides a bunch of metrics for each song track, in order to develop patterns that allow a better understanding of the operation of Spotify, as well as the study of music production and consumption and the effect on users.
 
 ### Graph Visualization.
 The most important part of this tool, is the output for network graph visualization.
@@ -16,8 +16,8 @@ The most important part of this tool, is the output for network graph visualizat
 
 - 1: Original tracks from Playlists
 - 2: Recommended tracks
-- 3: Original artits from playlists
-- 4: Artits from recommended tracks
+- 3: Original artists from playlists
+- 4: Artists from recommended tracks
 - 5: Related artists
 
 ***EDGES***
