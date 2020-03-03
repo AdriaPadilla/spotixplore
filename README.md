@@ -28,7 +28,7 @@ The most important part of this tool, is the output for network graph visualizat
 
 ***EXAMPLE***
 
-![Spotixplore graph image](https://raw.githubusercontent.com/AdriaPadilla/spotixplore/master/img/simple_graph.png
+![Spotixplore graph image](https://raw.githubusercontent.com/AdriaPadilla/spotixplore/master/img/simple_graph_2.png
 )
 
 
