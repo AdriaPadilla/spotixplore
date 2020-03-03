@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(name='spotixplore',
-      version="0.1.7",
+      version="0.1.8",
       url = "https://github.com/AdriaPadilla/spotixplore", 
       description='Explore Spotify tracks features and recommended tracks from a playlist',
       author='Adrian Padilla',
