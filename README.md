@@ -26,6 +26,12 @@ The most important part of this tool, is the output for network graph visualizat
 - (3)Original artists --> (5)Related Artists
 - (3)Recommended tracks --> (4)Artists from recommended tracks
 
+***EXAMPLE***
+
+![Spotixplore graph image](https://raw.githubusercontent.com/AdriaPadilla/spotixplore/master/img/simple_graph.png
+)
+
+
 For each playlist, the tool will output 1 csv with all edges + 1 xlsx with all node information. You'll need a network graph visualization software (such as Gephi) to load this data and create the visualization. 
 
 ***Output Examples***
