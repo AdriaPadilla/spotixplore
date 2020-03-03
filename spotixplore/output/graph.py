@@ -130,7 +130,7 @@ def graph_generator(object_track_recommendations_list, recommended_artists_list,
 		df = pd.DataFrame({
 			"name": "artist - " + data["artist_name"],
 			"genre": data.get("album_genres", "Nan"),
-			"type": "related_artist",
+			"type": "recommended_artist",
 			"global_type": "artist",
 			"popularity": data["popularity"],
 			"id": data["artist_id"],

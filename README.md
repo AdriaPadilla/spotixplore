@@ -7,7 +7,26 @@
 ## 1. What is this about?
 ***Important note: Spotixplore is not finished!***
 
-This tool has been created to explore the possibilities of the Spotify WEB API, and more concertedly, the way in which music is recommended and related. Spotixplore provides a bunch of metrics for each song, in order to develop patterns that allow a better understanding of the operation of Spotify, as well as the study of music production and consumption and the effect on users.
+This tool has been created to explore the possibilities of the Spotify WEB API, and more concertedly, the way in which music is recommended and related. **Spotixplore** provides a bunch of metrics for each song track, in order to develop patterns that allow a better understanding of the operation of Spotify, as well as the study of music production and consumption and the effect on users.
+
+### Graph Visualization.
+The most important part of this tool, is the output for network graph visualization.
+
+***Type of Nodes***: There are 5 type of nodes.
+
+- 1: Original tracks from Playlists
+- 2: Recommended tracks
+- 3: Original artits from playlists
+- 4: Artits from recommended tracks
+- 5: Related artists
+
+***EDGES***
+
+- (1)Original tracks --> (2)Recommended tracks
+- (3)Original artists --> (5)Related Artists
+- (3)Recommended tracks --> (4)Artists from recommended tracks
+
+For each playlist, the tool will output 1 csv with all edges + 1 xlsx with all node information. You'll need a network graph visualization software (such as Gephi) to load this data and create the visualization. 
 
 ## 2. Limitations
 Spotify applies some limitations.
