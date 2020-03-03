@@ -28,6 +28,13 @@ The most important part of this tool, is the output for network graph visualizat
 
 For each playlist, the tool will output 1 csv with all edges + 1 xlsx with all node information. You'll need a network graph visualization software (such as Gephi) to load this data and create the visualization. 
 
+***Output Examples***
+Please, visit the folder "output_examples" to see examples. 
+
+***¿Need help?***
+This tool is under development, and I'm working on it in my free time. Do not hesitate to contact me if you think you can make contributions or want to collaborate.
+
+
 ## 2. Limitations
 Spotify applies some limitations.
 
@@ -102,11 +109,4 @@ OR:
 
 Working to make it more easy!
 
-You have to change "limit=" property on line 88 of "recommended_tracks.py"
-
-## 6. The Output
-The application will create 2 files:
-
-One .XLSX file for each playlist with all the data, including recommended tracks.
-
-One .CSV file with node relations to generate a graph network visualization.
+You have to change "limit=" property on line 25 of "get_recommended_tracks.py"
