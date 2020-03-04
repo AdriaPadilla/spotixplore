@@ -1,5 +1,5 @@
 # Spotixplore V 0.1.8
-[![Anaconda-Server Badge](https://anaconda.org/adriapadilla/spotixplore/badges/version.svg)](https://anaconda.org/adriapadilla/spotixplore)  [![Anaconda-Server Badge](https://img.shields.io/pypi/v/spotixplore.svg)](https://pypi.org/project/spotixplore/)
+[![Anaconda-Server Badge](https://img.shields.io/pypi/v/spotixplore.svg)](https://pypi.org/project/spotixplore/)
 
 ![Spotixplore graph image](https://raw.githubusercontent.com/AdriaPadilla/spotixplore/master/img/img1.png
 )
@@ -53,11 +53,6 @@ Option 1: Pip install
 
 ```bash
 ...$: pip install spotixplore
-```
-
-Option 1.1: Conda install
-```bash
-conda install -c adriapadilla spotixplore
 ```
 
 Option 2: Hardcode
