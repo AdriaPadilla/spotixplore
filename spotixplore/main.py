@@ -1,8 +1,7 @@
 import spotixplore.starting_point as st
 
-import spotixplore.extraction.get_tracks as gt
-import spotixplore.extraction.get_recommended_tracks as gr
-import spotixplore.extraction.get_artists as ga
+import spotixplore.classes.track_class as track
+import spotixplore.classes.artist_class as artist
 
 import spotixplore.output.graph as tg
 import spotixplore.output.dataframing as df
@@ -11,18 +10,24 @@ import spotixplore.output.dataframing as df
 # Second, you have to define playlists in "starting_pint.py"
 
 playlists = st.PLAYLISTS
+recommended_tracks = True
+recommended_artists = True
 
 def spotixplore(playlists):
+
+	t = track.Track
+	a = artist.Artist
+
 	for playlist in playlists:
-			object_track_list, seeds_list = gt.get_tracks_from_playlist(playlist)
-			object_track_recommendations_list, recom_tracks_id_list = gr.get_recommended_from_seeds(seeds_list)
 
-			original_artists_list, recommended_artists_list = ga.get_artists(object_track_list)
+		track_list = t.explore_tracks(playlist, recommended_tracks)
+		artist_list = a.explore_artists(track_list, recommended_artists)
 
-			tg.graph_generator(object_track_recommendations_list, recommended_artists_list, playlist, object_track_list, original_artists_list)
-			df.dataframing(object_track_list, object_track_recommendations_list, original_artists_list, recommended_artists_list, playlist)
+		tg.graph_generator(track_list, artist_list, playlist)
 
-			print("Job Done!")
+		df.dataframing(track_list, artist_list, playlist)
+
+		print("Job Done!")
 
 
 if __name__ == "__main__":

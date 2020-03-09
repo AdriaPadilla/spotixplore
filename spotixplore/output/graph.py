@@ -1,6 +1,6 @@
 import pandas as pd
 
-def graph_generator(object_track_recommendations_list, recommended_artists_list, playlist, object_track_list, original_artists_list):
+def graph_generator(track_list, artist_list, playlist):
 
 #
 # EDGES TABLE
@@ -10,11 +10,10 @@ def graph_generator(object_track_recommendations_list, recommended_artists_list,
 # Original tracks --> Recommended Track 
 #
 
-	for track in object_track_recommendations_list:
+	for track in track_list:
 		
-		data = track.__dict__
-		source = data["seed"]
-		target = data["id"]
+		source = track.seed
+		target = track.id
 
 		node_pair = str(source)+";"+str(target)
 		
@@ -27,11 +26,10 @@ def graph_generator(object_track_recommendations_list, recommended_artists_list,
 #  Tracks (recommended + Original) --> Artists
 #
 
-	for track in object_track_recommendations_list:
+	for track in track_list:
 		
-		data = track.__dict__
-		source = data["artist_id"]
-		target = data["id"]
+		source = track.id
+		target = track.artist_id
 
 		node_pair = str(source)+";"+str(target)
 		
@@ -43,11 +41,10 @@ def graph_generator(object_track_recommendations_list, recommended_artists_list,
 # Artists original --> Related Artists
 #
 
-	for artist in recommended_artists_list:
+	for artist in artist_list:
 		
-		data = artist.__dict__
-		source = data["seed"]
-		target = data["id"]
+		source = artist.seed
+		target = artist.id
 
 		node_pair = str(source)+";"+str(target)
 		
@@ -67,7 +64,6 @@ def graph_generator(object_track_recommendations_list, recommended_artists_list,
 # 2 Recommended tracks
 # 3 Original artits from playlists
 # 4 Artits from recommended tracks
-# 5 Related artists
 
 # List for dataframes
 
@@ -75,89 +71,48 @@ def graph_generator(object_track_recommendations_list, recommended_artists_list,
 
 # Object 1: ORIGINAL TRACKS FROM PLAYLIST
 
-	for track in object_track_list:
+	for track in track_list:
 
 		data = track.__dict__
-			
+
+		if data["seed"] == "from_playlist":
+			track_type = data["seed"]
+		else:
+			track_type = "recommended_track"
+
 		df = pd.DataFrame({
 			"name": "track - " + data["track_name"] + " - " + data["artist_name"],
-			"genre": data.get("album_genres", "Nan"),
-			"type": "playlist_track",
+			"genre": data["album_genre"],
+			"type": track_type,
 			"global_type": "song",
 			"popularity": data["popularity"],
 			"id": data["id"],
 			}, index=[0])
 		all_nodes_info.append(df)
 
-# Object 2: Recommended TRACKS 
-
-	for track in object_track_recommendations_list:
-
-		data = track.__dict__
-
-		df = pd.DataFrame({
-			"name": "track - " + data["track_name"] + " - " + data["artist_name"],
-			"genre": data.get("album_genres", "Nan"),
-			"type": "recommended_track",
-			"global_type": "song",
-			"popularity": data["popularity"],
-			"id": data["id"],
-			}, index=[0])
-		all_nodes_info.append(df)
 
 # Object 3: Original Artist from PLaylist
 
-	for artist in original_artists_list:
+	for artist in artist_list:
 
 		data = artist.__dict__
 
 		df = pd.DataFrame({
 			"name": "artist - " + data["artist_name"],
-			"genre": data.get("artist_genres", "Nan"),
-			"type": "playlist_artist",
+			"genre": data["artist_genres"],
+			"type": data["origin"],	
 			"global_type": "artist",
 			"popularity": data["popularity"],
 			"id": data["id"],
 			}, index=[0])
 		all_nodes_info.append(df)
-
-# Object 4: Artists From recommended Tracks
-
-	for artist in object_track_recommendations_list:
-
-		data = artist.__dict__
-			
-		df = pd.DataFrame({
-			"name": "artist - " + data["artist_name"],
-			"genre": data.get("album_genres", "Nan"),
-			"type": "recommended_artist",
-			"global_type": "artist",
-			"popularity": data["popularity"],
-			"id": data["artist_id"],
-			}, index=[0])
-		all_nodes_info.append(df)
-
-# Object 5: Related Artists
-
-	for artist in recommended_artists_list:
-
-		data = artist.__dict__
-			
-		df = pd.DataFrame({
-			"name": "artist - " + data["artist_name"],
-			"genre": data.get("artist_genres", "Nan"),
-			"type": "related_artist",
-			"global_type": "artist",
-			"popularity": data["popularity"],
-			"id": data["id"],
-			}, index=[0])
-		all_nodes_info.append(df)
-
 
 # EXPORT ALL Data
 
 	all_nodes_frame = pd.concat(all_nodes_info, ignore_index=True)
 	all_nodes_frame.to_excel(playlist+"_all_nodes_output.xlsx")
+
+	print(all_nodes_frame)
 
 
 
