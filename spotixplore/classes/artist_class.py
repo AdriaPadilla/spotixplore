@@ -69,7 +69,7 @@ class Artist():
 			if track.seed == "from_playlist":
 				origin = "playlist_artist"
 			else:
-				origin = "related_artist"
+				origin = "recommended_artist"
 
 			artist_object = Artist(
 				origin,
