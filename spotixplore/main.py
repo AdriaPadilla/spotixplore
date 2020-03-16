@@ -1,7 +1,7 @@
 import spotixplore.starting_point as st
 
-import spotixplore.classes.track_class as track
-import spotixplore.classes.artist_class as artist
+import spotixplore.tracks.get_tracks as track
+import spotixplore.artists.get_artists as artist
 
 import spotixplore.output.graph as tg
 import spotixplore.output.dataframing as df
@@ -15,13 +15,10 @@ recommended_artists = True
 
 def spotixplore(playlists):
 
-	t = track.Track
-	a = artist.Artist
-
 	for playlist in playlists:
 
-		track_list = t.explore_tracks(playlist, recommended_tracks)
-		artist_list = a.explore_artists(track_list, recommended_artists)
+		track_list = track.explore_tracks(playlist, recommended_tracks)
+		artist_list = artist.explore_artists(track_list, recommended_artists)
 
 		tg.graph_generator(track_list, artist_list, playlist)
 
