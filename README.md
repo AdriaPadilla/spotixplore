@@ -1,4 +1,4 @@
-# Spotixplore V 0.2.0
+# Spotify Network Analysis
 [![Anaconda-Server Badge](https://img.shields.io/pypi/v/spotixplore.svg)](https://pypi.org/project/spotixplore/)
 
 ![Spotixplore graph image](https://raw.githubusercontent.com/AdriaPadilla/spotixplore/master/img/img1.png
